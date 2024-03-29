@@ -1,0 +1,135 @@
+<html data-theme="garden">
+  <!--
+    see more :
+      - core
+        - https://daisyui.com/docs
+      - layout
+        - https://tailwindcss.com/docs/container
+        - https://tailwindcss.com/docs/width
+        - https://tailwindcss.com/docs/flex
+        - https://tailwindcss.com/docs/justify-content
+        - https://tailwindcss.com/docs/grid-template-columns
+        - https://tailwindcss.com/docs/padding
+  -->
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="./index.js"></script>
+  </head>
+  <body>
+    <div class="flex flex-col h-screen">
+      <!-- |||| HEADER START |||| -->
+      <div class="container mx-auto">
+        <div class="navbar">
+          <!-- <button class="btn btn-ghost text-xl disabled">
+            바코드 스캔 데모
+          </button> -->
+          <span class="text-xl font-bold">바코드 스캔 데모</span>
+          <span class="badge cursor-pointer" onclick="showBarcode()"
+            >바코드 예시</span
+          >
+        </div>
+        <!-- indicator -->
+        <div class="grid grid-cols-4 gap-5 py-5">
+          <div class="indicator">
+            <span class="indicator-item badge badge-secondary" id="i16">0</span>
+            <span class="font-bold p-2">1.6"</span>
+          </div>
+          <div class="indicator">
+            <span class="indicator-item badge badge-secondary" id="i22">0</span>
+            <span class="font-bold p-2">2.2"</span>
+          </div>
+          <div class="indicator">
+            <span class="indicator-item badge badge-secondary" id="i29">0</span>
+            <span class="font-bold p-2">2.9"</span>
+          </div>
+          <div class="indicator">
+            <span class="indicator-item badge badge-secondary" id="i42">0</span>
+
+            <span class="font-bold p-2">4.2"</span>
+          </div>
+        </div>
+        <!-- stat -->
+        <div class="grid">
+          <div class="stats shadow">
+            <div class="stat">
+              <div class="stat-title">총 스캔</div>
+              <div class="stat-value" id="totalScanned">0</div>
+              <div class="stat-desc"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- |||| HEADER END |||| -->
+
+      <!-- |||| BODY START |||| -->
+      <div class="flex-grow">
+        <div class="container mx-auto">
+          <!-- table list -->
+          <div class="overflow-x-auto py-5">
+            <table class="table">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>바코드</th>
+                  <th>인치</th>
+                  <th>스캔일시</th>
+                </tr>
+              </thead>
+              <tbody id="tbody"></tbody>
+            </table>
+          </div>
+          <!-- stat -->
+          <div class="join grid grid-cols-2">
+            <button class="join-item btn btn-outline" id="movePrev">
+              이전 페이지
+            </button>
+            <button class="join-item btn btn-outline" id="moveNext">
+              다음 페이지
+            </button>
+          </div>
+          <!-- stat -->
+          <div class="grid grid-cols-5 py-5">
+            <div></div>
+            <div></div>
+            <button class="btn" id="btnSave">저장하기</button>
+
+            <dialog id="saveModal" class="modal">
+              <div class="modal-box">
+                <h3 class="font-bold text-lg" id="saveModalTitle">저장완료</h3>
+                <p class="py-4" id="saveModalDesc">
+                  스캔하신 내역이 저장되었습니다.
+                </p>
+                <div class="modal-action">
+                  <form method="dialog">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">닫기</button>
+                  </form>
+                </div>
+              </div>
+            </dialog>
+          </div>
+          <!-- |||| FOOTER |||| -->
+          <div class="container mx-auto">
+            <!-- stat -->
+            @since 2024-
+          </div>
+
+          <div class="toast">
+            <!-- <div class="alert alert-info">
+              <span>New message arrived.</span>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- |||| BODY END |||| -->
+  </body>
+</html>

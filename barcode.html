@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.9.0/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
+  </head>
+  <body>
+    <svg id="barcode-16"></svg>
+    <svg id="barcode-22"></svg>
+    <svg id="barcode-29"></svg>
+    <svg id="barcode-42"></svg>
+    <script>
+      $('#barcode-16').JsBarcode('162536254712');
+      $('#barcode-22').JsBarcode('222536254712');
+      $('#barcode-29').JsBarcode('292536254712');
+      $('#barcode-42').JsBarcode('422536254712');
+    </script>
+  </body>
+</html>

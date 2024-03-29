@@ -11,15 +11,24 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
   </head>
   <body>
-    <svg id="barcode-16"></svg>
-    <svg id="barcode-22"></svg>
-    <svg id="barcode-29"></svg>
-    <svg id="barcode-42"></svg>
+    <div class="p-10">
+      <svg id="barcode-16"></svg>
+    </div>
+    <div class="p-10">
+      <svg id="barcode-22"></svg>
+    </div>
+    <div class="p-10">
+      <svg id="barcode-29"></svg>
+    </div>
+    <div class="p-10">
+      <svg id="barcode-42"></svg>
+    </div>
+
     <script>
-      $('#barcode-16').JsBarcode('162536254712');
-      $('#barcode-22').JsBarcode('222536254712');
-      $('#barcode-29').JsBarcode('292536254712');
-      $('#barcode-42').JsBarcode('422536254712');
+      $("#barcode-16").JsBarcode("162536254712");
+      $("#barcode-22").JsBarcode("222536254712");
+      $("#barcode-29").JsBarcode("292536254712");
+      $("#barcode-42").JsBarcode("422536254712");
     </script>
   </body>
 </html>

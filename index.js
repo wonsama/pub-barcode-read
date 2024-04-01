@@ -95,7 +95,8 @@ function movePrev() {
 
 function moveNext() {
   const MAX_PAGE = Math.floor(scanned.length / PAGE_PER_SHOW);
-  if (page < MAX_PAGE) {
+  const JUST_FIT = scanned.length % PAGE_PER_SHOW == 0;
+  if (page < MAX_PAGE && !(JUST_FIT && page + 1 == MAX_PAGE)) {
     page = page + 1;
     updateList();
   }

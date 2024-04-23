@@ -33,9 +33,11 @@ function scanItem(barcode) {
   let date = dayjs().format("YY.MM.DD HH:mm:ss");
   let no = scanned.length + 1;
   let inch = getInch(barcode);
-  scanned.push({ barcode, date, no, inch });
-
-  redraw();
+  if (barcode) {
+    // 바코드가 존재하는 경우에만 목록을 추가한다
+    scanned.push({ barcode, date, no, inch });
+    redraw();
+  }
 }
 
 // UPDATE

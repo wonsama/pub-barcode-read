@@ -24,3 +24,7 @@ BARCODE READER 를 사용하여 BARCODE 를 스캔 하면, 해당 정보가 화�
 - 또는 `JsBarcode` 라이브러리를 사용하여 바코드를 생성 할 수 있습니다.
 
 ![메인화면](docs/images/01.png)
+
+## LIVE 확인
+
+- [https://pub-barcode-read.vercel.app/](https://pub-barcode-read.vercel.app/) 위 링크에서 확인 가능합니다.

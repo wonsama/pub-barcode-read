@@ -11,24 +11,36 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.6/JsBarcode.all.min.js"></script>
   </head>
   <body>
-    <div class="p-10">
+    <h1 class="text-5xl font-bold">Barcode DEMO</h1>
+    <div class="p-10 text-xl">
+      <span>Barcode 1.6"</span>
       <svg id="barcode-16"></svg>
     </div>
-    <div class="p-10">
+    <div class="p-10 text-xl">
+      <span>Barcode 2.2"</span>
       <svg id="barcode-22"></svg>
     </div>
-    <div class="p-10">
+    <div class="p-10 text-xl">
+      <span>Barcode 2.9"</span>
       <svg id="barcode-29"></svg>
     </div>
-    <div class="p-10">
+    <div class="p-10 text-xl">
+      <span>Barcode 4.2"</span>
       <svg id="barcode-42"></svg>
+    </div>
+    <div class="p-10 text-xl">
+      <span>Barcode err</span>
+      <svg id="barcode-err1"></svg>
+      <svg id="barcode-err2"></svg>
     </div>
 
     <script>
-      $("#barcode-16").JsBarcode("162536254712");
-      $("#barcode-22").JsBarcode("222536254712");
-      $("#barcode-29").JsBarcode("292536254712");
-      $("#barcode-42").JsBarcode("422536254712");
+      $("#barcode-16").JsBarcode("078DAAE4B09B"); // B09
+      $("#barcode-22").JsBarcode("078DAAE4B19B"); // B19
+      $("#barcode-29").JsBarcode("078DAAE4B29B"); // B29
+      $("#barcode-42").JsBarcode("078DAAE4B69B"); // B69
+      $("#barcode-err1").JsBarcode("078DAAE4B00B"); // NOT SUPPORT INCH
+      $("#barcode-err2").JsBarcode("078DAAE4B0"); // LEN 10
     </script>
   </body>
 </html>
